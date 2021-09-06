@@ -3,7 +3,7 @@ import React from 'react';
 let MainContent = (props) => {
         return (
             <div className="jumbotron mt-5">
-                <h1 className="display-4">Welcome, {props.isLoggedIn ? "testing..." : "Guest"}</h1>
+                <h1 className="display-4">Welcome, {props.isLoggedIn ? props.user : "Guest"}</h1>
                 <p className="lead"></p>
                 <hr className="my-4" />
                 <h2 className="text-info">Current Assignments</h2>
