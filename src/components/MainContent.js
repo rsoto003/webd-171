@@ -11,7 +11,6 @@ class MainContent extends Component {
     }
     render(){
         return (
-            // <div>{this.props.user}</div>
             <div class="jumbotron mt-5">
                 <h1 class="display-4">Welcome, {this.state.isLoggedIn ? this.props.user : "Guest"}</h1>
                 <p class="lead"></p>
