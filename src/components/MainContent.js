@@ -1,26 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class MainContent extends Component {
-    state = {
-        isLoggedIn: true
-    }
-    userSignIn = () => {
-        this.setState(prevState => ({
-            isLoggedIn: !prevState.isLoggedIn
-        }))
-    }
-    render(){
+let MainContent = (props) => {
         return (
-            <div class="jumbotron mt-5">
-                <h1 class="display-4">Welcome, {this.state.isLoggedIn ? this.props.user : "Guest"}</h1>
-                <p class="lead"></p>
-                <hr class="my-4" />
-                <h2 class="text-info">Current Assignments</h2>
-                <p>{this.state.isLoggedIn ? "Week 2 Assignment" : "No assignments available, please log in first."}</p>
-                <button class={this.state.isLoggedIn ? "btn btn-danger btn-lg mt-5" : "btn btn-primary btn-lg mt-5"} role="button" onClick={this.userSignIn}>{this.state.isLoggedIn ? "Log Out" : "Log In"}</button>
+            <div className="jumbotron mt-5">
+                <h1 className="display-4">Welcome, {props.isLoggedIn ? "testing..." : "Guest"}</h1>
+                <p className="lead"></p>
+                <hr className="my-4" />
+                <h2 className="text-info">Current Assignments</h2>
+                <p>{props.isLoggedIn ? "Week 2 Assignment" : "No assignments available, please log in first."}</p>
+                <button className={props.isLoggedIn ? "btn btn-danger btn-lg mt-5" : "btn btn-primary btn-lg mt-5"} onClick={props.userSignIn}>{props.isLoggedIn ? "Log Out" : "Log In"}</button>
             </div>
         )
-    }
 }
 
 export default MainContent;
