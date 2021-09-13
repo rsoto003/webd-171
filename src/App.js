@@ -16,7 +16,7 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <Navbar user={this.state.user} isLoggedIn={this.state.isLoggedIn}/>
+        {this.state.isLoggedIn ? <Navbar user={this.state.user} isLoggedIn={this.state.isLoggedIn}/> : null}
         <MainContent user={this.state.user} isLoggedIn={this.state.isLoggedIn} userSignIn={this.userSignIn}/>
       </div>
     );
